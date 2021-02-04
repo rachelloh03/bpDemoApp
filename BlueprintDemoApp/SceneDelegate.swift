@@ -24,8 +24,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
         
-        // **** TODO (1): Let's use our HomeVC and comment this line out ****
-        // let contentView = ContentView().environment(\.managedObjectContext, context)
         let moviesTable = MovieTableViewController()
         let navController = UINavigationController(rootViewController: moviesTable)
 
@@ -33,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             
-            // *** TODO (2): Now let's set our rootVC as the nav controller we just created ***
+            // Our rootVC is the first view we see when we open the app.
             window.rootViewController = navController
             self.window = window
             window.makeKeyAndVisible()
