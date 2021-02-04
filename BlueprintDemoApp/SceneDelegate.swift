@@ -26,15 +26,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // **** TODO (1): Let's use our HomeVC and comment this line out ****
         // let contentView = ContentView().environment(\.managedObjectContext, context)
-        let homeViewController = HomeViewController()
-        let navController = UINavigationController(rootViewController: homeViewController)
+        let moviesTable = MovieTableViewController()
+        let navController = UINavigationController(rootViewController: moviesTable)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             
             // *** TODO (2): Now let's set our rootVC as the nav controller we just created ***
-            window.rootViewController = navController
             window.rootViewController = navController
             self.window = window
             window.makeKeyAndVisible()
