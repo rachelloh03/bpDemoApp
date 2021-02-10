@@ -27,6 +27,10 @@ var var8: String
 // TODO: document some useful methods for each (e.g. arrays: append, count, reduce, map, remove, concat, etc.)
 
 // Tuples
+/* Useful methods
+ assafsadsadf
+ 
+ */
 let myTuple = ("blueprint", 2021)
 
 // Arrays
