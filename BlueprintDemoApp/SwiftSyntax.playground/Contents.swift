@@ -29,14 +29,40 @@ var var8: String
 // Tuples
 let myTuple = ("blueprint", 2021)
 
+//Tuple Methods
+myTuple[0]  //access element at index
+
 // Arrays
 let myFirstArray = ["blueprint", 2021] // ERROR
-let mySecondArray: [Any] = ["blueprint", 2021]
+var mySecondArray: [Any] = ["blueprint", 2021]
 let emptyArray: [Int] = []
 let emptyArray2: Array<Double> = Array() // similar to Java
+let digitCounts = Array(repeating: 0, count: 10) //intializes array of 0s with length 10
 
-// Sets
+//Array Methods
+mySecondArray.isEmpty  //checks if empty
+mySecondArray.count  //length of array
+mySecondArray.first  //get first element of array
+mySecondArray.last  //get last element of array
+mySecondArray.append("new element") //append item to end of array
+mySecondArray.append(contentsOf: ["a", "b"]) //append multiple elements to end of array
+mySecondArray.insert("Swift", at: 1) //insert item at specified index
+mySecondArray.remove(at: 1) //removes element at index
+mySecondArray.removeLast() //remove last element
+mySecondArray[0] //get element at index 0
+mySecondArray[0...2] //gets subarray of elements, inclusive
+
+
+// Sets- used to test efficiently for membership when order doesn't matter
 let mySet: Set = ["start hacking", "mobile dev (iOS)", "mobile dev (Android)", "web dev beginner", "web dev advanced"]
+let set2: Set = ["start hacking", "a", "Swift", "test"]
+
+// Set methods
+mySet.contains("test") //tes
+mySet.isSubset(of: set2)  //test if your set is a subset
+mySet.union(set2) //join with another set
+mySet.intersection(set2) //get intersection of this set with other set
+// can also use any nonmutating sequence or collection methods with a set
 
 // Dictionaries
 let myDict: Dictionary<String, Int> = [:]
@@ -58,7 +84,8 @@ for element in mySecondArray {
 // Optionals //
 // ********* //
 
-// TODO: what is an optional? when does it arise?
+// Optional- is either an unwrapped value or nil- basically will either have a value that can be unwrapped and accessed, or not value
+// used in situations when a value may not exist- like when an operation may fail or return nothing
 // default is nil
 var myImage: UIImage? // same as `var myImage: UIImage? = nil`
 var mySlider: UISlider!
@@ -92,7 +119,7 @@ func unwrapper() {
 // Basic functions //
 // *************** //
 
-// TODO: document syntax
+// func name(parameters) -> (return type) { function }
 func myVar(param: String) -> String {
     var v: String
     v = param
@@ -125,7 +152,9 @@ enum Track {
     case startHacking, mobileiOS, mobileAndroid, webdevBeginner, webdevAdvanced
 }
 
-// TODO: explain diff between structs and classes
+// both class and struct types can define properties, methods, initializers, and conform to protocols
+// Classes can inherit from each other and is a reference type- instances of a class are accessed through references
+// Struct is a value type and (kinda) immutable
 
 // struct
 struct Hacker {
@@ -134,7 +163,7 @@ struct Hacker {
     let track: Track
     var isCheckedIn: Bool = false
     
-    // TODO: explain why we need "'mutating" keywrod
+    // mutating functions changes the values of the struct- internally, the old Hacker is replaced by a new Hacker with an updated isCheckedIn value
     mutating func checkIn() {
         isCheckedIn = true
     }
