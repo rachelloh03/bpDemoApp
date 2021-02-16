@@ -17,10 +17,10 @@ We provide a XCode playground titled `SwiftSyntax`. We cover variable declaratio
 In `HomeViewController.swift`, we build a single-view app, demonstrating the use of layout constraints and basic functionality of UI elements such as labels, buttons, and text fields.
 
 ## Session 2
-In this session, we begin by building a UITableViewController, which will be used to display movie data. We create a sample MovieViewCell that displays a movie's poster image, title, release date, and rating. We also added functionality to the table view so that clicking a cell would display its content in a stack view, which is itself embedded in a scroll view.
+In this session, we begin by building a UITableViewController, which will be used to display movie data. We create a sample MovieViewCell that displays a movie's poster image, title, release date, and rating.
 
 ## Session 3
-This session focuses on managing and passing data between consecutive views. We create a new object `Movies` that holds an array of `Movie` structs. An object of `Movies` can also fetch movie data from [The Movie Database (tmdb)](https://www.themoviedb.org) and parse the JSON response with [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON). Our table view displays the movie data stored in our `Movies` object. Selecting a movie in the table then passes the data to another view controller, `MovieView`.
+This session focuses on managing and passing data between consecutive views. We create a new object `Movies` that holds an array of `Movie` structs. An object of `Movies` can also fetch movie data from [The Movie Database (tmdb)](https://www.themoviedb.org) and parse the JSON response with [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON). Our table view displays the movie data stored in our `Movies` object.
 
 ## Session 4 (optional)
 We hosted a supplementary session for students to ask more questions about iOS development and the Swift language. Some other important concepts we cover are singletons, Core Data, ....
