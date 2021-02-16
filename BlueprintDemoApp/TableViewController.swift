@@ -25,7 +25,7 @@ class MovieTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    // MARK: - Table view data source
+    // MARK (not a person): - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -37,9 +37,11 @@ class MovieTableViewController: UITableViewController {
         return 0
     }
 
-    // TODO: Desecribe what this function does
+    // This function returns a type of cell that will be displayed at the given indexPath (row, column).
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // TODO: What does it mean to dequeue a cell?
+        // As you scroll down a tableView, the cells that appear or that will appear will be "dequed", which means that they will be processed and returned as a specific instance of a UITableViewCell.
+        // It's important to note that not all cells are dequed at once. Only the cells that are about to be scrolled to/displayed on screen are dequed. This helps with performance.
+        // Also note the "withIdentifier" parameter here. Each UITableViewCell will have a unique identifier, which we'll get to later in this session.
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
