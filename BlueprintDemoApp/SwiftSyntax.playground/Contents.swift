@@ -28,6 +28,7 @@ var var8: String
 // ********** //
 // Data Types //
 // ********** //
+
 // Tuples //
 let myTuple = ("blueprint", 2021)
 
@@ -39,6 +40,7 @@ var mySecondArray: [Any] = ["blueprint", 2021]
 let emptyArray: [Int] = []
 let emptyArray2: Array<Double> = Array() // similar to Java
 let digitCounts = Array(repeating: 0, count: 10) //intializes array of 0s with length 10
+
 /* Array Methods */
 mySecondArray.isEmpty // checks if empty
 mySecondArray.count   // length of array
@@ -61,7 +63,6 @@ for i in 0...mySecondArray.count {
 for element in mySecondArray {
     print(element)
 }
-
 
 /* Other Array Methods */
 /*
@@ -100,14 +101,18 @@ let instructors = myClass["mobile dev (iOS)"] // instructors = ["Arun", "Darren"
 // Typealiases: alternate name for existing type //
 typealias CustomType = [UUID:People] // Assume we have a class or struct People
 
+
 // ********* //
 // Optionals //
 // ********* //
-// An optional is either an unwrapped value or nil. That means that it will either have a value that can be unwrapped and accessed, or be null.
+// An optional is either an unwrapped value or nil. That means that it will either have a value or be null.
+// How do we access a value that can be nil though? This is called *unwrapping*.
 // Optionals are used in situations when a value may not exist - like when an operation may fail or return nothing
 // By default they are set to nil
+
 var myImage: UIImage?   // ? is the same as `var myImage: UIImage? = nil`
-var mySlider: UISlider! // ! is a forced unwrap operator. If the value is nil (not by default), the program will be stopped (unless you catch it)
+var mySlider: UISlider! // ! is the force unwrap operator. If the value is nil (not by default), the program will be terminated during runtime (unless you catch it)
+
 // Unwrapping optionals
 var unwrappedImage = UIImage()
 var unwrappedSlider = UISlider()
@@ -159,6 +164,7 @@ do {
     print("Something went wrong!")
 }
 
+
 // ************************* //
 // Enums, classes, & structs //
 // ************************* //
@@ -174,7 +180,7 @@ struct Hacker {
     let track: Track
     var isCheckedIn: Bool = false
     
-    // mutating functions changes the values of the struct- internally, the old Hacker is replaced by a new Hacker with an updated isCheckedIn value
+    // Mutating functions changes the values of the struct- internally, the old Hacker is replaced by a new Hacker with a different isCheckedIn value.
     mutating func checkIn() {
         isCheckedIn = true
     }
@@ -200,7 +206,7 @@ class Hackathon {
 
 // Both class and struct types can define properties, methods, initializers, and conform to protocols.
 // Classes can inherit from each other and is a reference type - instances of a class are accessed through references.
-// Struct is a value type and (kinda) immutable. Each instance of a struct is independent.
+// Struct is a value type and, in a way, immutable. Each instance of a struct is independent of another.
 /* CONCEPT CHECK
  
  class X {
