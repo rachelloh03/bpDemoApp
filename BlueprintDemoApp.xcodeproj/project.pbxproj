@@ -17,6 +17,7 @@
 		A87760A425CA5016007A5040 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A87760A225CA5016007A5040 /* LaunchScreen.storyboard */; };
 		A87760AF25CA5016007A5040 /* BlueprintDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87760AE25CA5016007A5040 /* BlueprintDemoAppTests.swift */; };
 		A87760BA25CA5016007A5040 /* BlueprintDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87760B925CA5016007A5040 /* BlueprintDemoAppUITests.swift */; };
+		A8C5BBA125E0C3DD00346569 /* Movies.json in Resources */ = {isa = PBXBuildFile; fileRef = A8C5BBA025E0C3DD00346569 /* Movies.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		A87760B525CA5016007A5040 /* BlueprintDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlueprintDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A87760B925CA5016007A5040 /* BlueprintDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueprintDemoAppUITests.swift; sourceTree = "<group>"; };
 		A87760BB25CA5016007A5040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8C5BBA025E0C3DD00346569 /* Movies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movies.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				A877609425CA5016007A5040 /* AppDelegate.swift */,
+				A8C5BBA025E0C3DD00346569 /* Movies.json */,
 				A877609625CA5016007A5040 /* SceneDelegate.swift */,
 				A85D054525CCA2F30014E9E0 /* TableViewController.swift */,
 				A877609825CA5016007A5040 /* HomeViewController.swift */,
@@ -247,6 +250,7 @@
 			files = (
 				A87760A425CA5016007A5040 /* LaunchScreen.storyboard in Resources */,
 				A87760A125CA5016007A5040 /* Preview Assets.xcassets in Resources */,
+				A8C5BBA125E0C3DD00346569 /* Movies.json in Resources */,
 				A877609E25CA5016007A5040 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
